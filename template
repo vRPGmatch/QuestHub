@@ -1,0 +1,51 @@
+CREATE TABLE QUEST_SOURCE
+	quest_id uint autoincrement,
+	active,
+	created_date datetime,
+	modified_date datetime,
+	name varchar,
+	description varchar
+
+
+CREATE TABLE QUEST_REWARD
+	quest_id,
+	score_type,
+	score_value,
+	created_date,
+	modified_date,
+
+CREATE TABLE QUEST_SCHEDULE
+	quest_id,
+	periodicity,
+	bonus_periodicity,
+	created_date,
+	modified_date
+
+CREATE TABLE PRIZE
+	prize_id,
+	tier_id,
+	active,
+	cost_type,
+	cost_value,
+	metavalue,
+	name,
+	description,
+	created_date,
+	modified_date
+
+CREATE TABLE COMPLETION
+	player_id,
+	date,
+	quest_id,
+	rating,
+	modified_date
+
+CREATE TABLE PAYOUTS
+	player_id,
+	date,
+	prize_id,
+	cost_type,
+	cost_value,
+	metavalue,
+	modified_date
+
